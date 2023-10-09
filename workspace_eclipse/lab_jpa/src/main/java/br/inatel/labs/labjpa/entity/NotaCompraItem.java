@@ -35,6 +35,20 @@ public class NotaCompraItem {
 		return valorCompraProduto.multiply(BigDecimal.valueOf(quantidade));
 	}
 
+	// construtores
+	public NotaCompraItem(NotaCompra nc1, Produto p1, BigDecimal bigDecimal, int i) {
+				
+	}
+	
+	public NotaCompraItem(@NotNull @Positive BigDecimal valorCompraProduto, @NotNull @Positive Integer quantidade,
+			NotaCompra notaCompra, Produto produto) {
+		super();
+		this.valorCompraProduto = valorCompraProduto;
+		this.quantidade = quantidade;
+		this.notaCompra = notaCompra;
+		this.produto = produto;
+	}
+
 	// acessores
 	public Long getId() {
 		return id;

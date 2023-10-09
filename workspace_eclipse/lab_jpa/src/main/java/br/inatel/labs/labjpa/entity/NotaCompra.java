@@ -37,6 +37,17 @@ public class NotaCompra {
 		return total;
 	}
 
+	// construtores
+	public NotaCompra() {
+			
+	}
+	
+	public NotaCompra(@NotNull @Past LocalDate dataEmissao, Fornecedor fornecedor) {
+		super();
+		this.dataEmissao = dataEmissao;
+		this.fornecedor = fornecedor;
+	}
+
 	// acessores
 	public Long getId() {
 		return id;
