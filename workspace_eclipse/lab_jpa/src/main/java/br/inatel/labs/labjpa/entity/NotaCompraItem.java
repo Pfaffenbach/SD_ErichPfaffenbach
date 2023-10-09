@@ -2,7 +2,6 @@ package br.inatel.labs.labjpa.entity;
 
 import java.math.BigDecimal;
 import java.util.Objects;
-
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;

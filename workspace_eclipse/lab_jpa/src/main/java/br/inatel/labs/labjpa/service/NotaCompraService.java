@@ -1,9 +1,7 @@
 package br.inatel.labs.labjpa.service;
 
 import java.util.List;
-
 import org.springframework.stereotype.Service;
-
 import br.inatel.labs.labjpa.entity.NotaCompra;
 import br.inatel.labs.labjpa.entity.NotaCompraItem;
 import jakarta.persistence.EntityManager;
@@ -31,6 +29,12 @@ public class NotaCompraService {
 				.getResultList();
 	}
 	
+	public NotaCompra buscarNotaCompraItemPeloIdComListaItem(Long id) {
+		NotaCompra notacompra = em.find(NotaCompra.class, id);
+		notacompra.getListaNotaCompraItem().size();
+		return notacompra;
+	}
+	
 	// nota compra item
 	public NotaCompraItem salvarNotaCompraItem(NotaCompraItem item) {
 			return em.merge(item);
@@ -44,4 +48,5 @@ public class NotaCompraService {
 		return em.createQuery("select i from NotaCompraItem i", NotaCompraItem.class)
 				.getResultList();
 	}
+	
 }

@@ -1,9 +1,7 @@
 package br.inatel.labs.labjpa.service;
 
 import java.util.List;
-
 import org.springframework.stereotype.Service;
-
 import br.inatel.labs.labjpa.entity.Produto;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
